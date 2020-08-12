@@ -1,0 +1,54 @@
+<script type="text/javascript">
+  RED.nodes.registerType('ulid', {
+    category: 'function',
+    color: '#E2D96E',
+    defaults: {
+      name: {
+        value: ""
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "font-awesome/fa-id-card",
+    label: function () {
+      return this.name || "ulid";
+    }
+  });
+</script>
+
+<script type="text/html" data-template-name="ulid">
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/html" data-help-name="ulid">
+  <p>A simple node that appends ULID to the input message.</p>
+  <h3>Outputs</h3>
+  <dl class="message-properties">
+    <dt>ulid
+      <span class="property-type">string</span>
+    </dt>
+    <dd>Random ULID. It is 26 character string consisting of alphanumeric capital letters excluding I, L, O,
+      and U.</dd>
+  </dl>
+  <h3>Details</h3>
+  <p>ULID is the alternative proposal of UUID. ULID has following features.</p>
+  <ul>
+    <li>128-bit compatibility with UUID</li>
+    <li>1.21e+24 unique ULIDs per millisecond</li>
+    <li>Lexicographically sortable!</li>
+    <li>Canonically encoded as a 26 character string, as opposed to the 36 character UUID</li>
+    <li>Uses Crockford's base32 for better efficiency and readability (5 bits per character)</li>
+    <li>Case insensitive</li>
+    <li>No special characters (URL safe)</li>
+    <li>Monotonic sort order (correctly detects and handles the same millisecond)</li>
+  </ul>
+  <p>(quoted by <a href="https://github.com/ulid/spec">ulid/spec</a>)</p>
+
+  <h3>References</h3>
+  <ul>
+    <li><a href="https://github.com/ulid/spec">ulid/spec: The canonical spec for ulid</a> - details for ULID.
+  </ul>
+</script>
