@@ -6,9 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["node-red", "ULID"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dozensofdars/node-red-contrib-ulid.git"
+  },
+  "keywords": [
+    "node-red",
+    "ULID"
+  ],
   "author": "dozensofdars",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dozensofdars/node-red-contrib-ulid/issues"
+  },
+  "homepage": "https://github.com/dozensofdars/node-red-contrib-ulid#readme",
   "node-red": {
     "nodes": {
       "ulid": "ulid-node.js"
